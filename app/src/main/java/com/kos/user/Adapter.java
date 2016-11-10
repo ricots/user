@@ -55,6 +55,7 @@ public class Adapter extends BaseAdapter{
          if(imageLoader==null);
         imageLoader=AppController.getInstance().getmImageLoader();
         CircleImageView imageView = (CircleImageView) convertView.findViewById(R.id.image_view);
+        TextView id = (TextView) convertView.findViewById(R.id.id);
         TextView kt = (TextView) convertView.findViewById(R.id.kategori);
         TextView almt = (TextView) convertView.findViewById(R.id.alamat);
         TextView hrg = (TextView) convertView.findViewById(R.id.harga);
@@ -62,6 +63,7 @@ public class Adapter extends BaseAdapter{
 
         Item item=items.get(position);
         Picasso.with(activity).load(item.getFoto()).resize(120, 60).into(imageView);
+        id.setText(item.getId_pemilik());
         kt.setText(item.getKategori());
         almt.setText(item.getAlamat());
         hrg.setText("harga : " +item.getHarga());

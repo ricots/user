@@ -22,7 +22,8 @@
         <activity android:name=".home" />
         <activity android:name=".cari_kos" />
         <activity android:name=".hasil_cari" />
-        <activity android:name=".detail_kos"></activity>
+        <activity android:name=".detail_kos" />
+        <activity android:name=".detail_kos_kosan"></activity>
     </application>
 
 </manifest>
